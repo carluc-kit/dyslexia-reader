@@ -18,17 +18,14 @@ jobs:
         with:
           python-version: '3.11'
       
-      - name: Install test dependencies
-        run: pip install pytest
-      
-      - name: Run tests
-        run: pytest test_reader.py -v
-      
       - name: Install ffmpeg
         run: brew install ffmpeg
       
-      - name: Install app dependencies
-        run: pip install rumps pyperclip
+      - name: Install dependencies
+        run: pip install pytest rumps pyperclip
       
       - name: Syntax check
         run: python -m py_compile reader.py speak.py
+      
+      - name: Run tests
+        run: pytest test_reader.py -v
