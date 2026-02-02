@@ -53,7 +53,7 @@ class DyslexiaReaderApp(rumps.App):
     
     def _build_speed_menu(self):
         speed_menu = rumps.MenuItem("Speed")
-        speeds = [0.5, 0.6, 0.7, 0.75, 0.8, 0.85, 0.9, 0.95, 1.0, 1.1, 1.2, 1.3, 1.5, 1.75, 2.0]
+        speeds = [0.5, 0.6, 0.7, 0.75, 0.8, 0.85, 0.9, 0.95, 1.0, 1.05, 1.1, 1.15, 1.2, 1.25, 1.3, 1.4, 1.5, 1.75, 2.0]
         for s in speeds:
             item = rumps.MenuItem(f"{s}x", callback=self._make_speed_callback(s))
             if s == self.speed:
